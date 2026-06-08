@@ -94,3 +94,19 @@ function getSuggestion(){
         </strong>
     `;
 }
+
+let targetDate = new Date("June 20, 2026 10:00:00");
+
+setInterval(()=>{
+
+let now = new Date();
+
+let diff = targetDate - now;
+
+let hours = Math.floor(diff/1000/60/60);
+
+document.getElementById("countdown")
+.innerText =
+hours + " Hours Left";
+
+},1000);
